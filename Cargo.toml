@@ -1,0 +1,16 @@
+[package]
+name = "sqlite-search"
+version = "0.1.0"
+edition = "2021"
+description = "Zero-dependency CLI tool to search values in SQLite databases"
+
+[dependencies]
+rusqlite = { version = "0.38", features = ["bundled"] }
+clap = { version = "4", features = ["derive"] }
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"

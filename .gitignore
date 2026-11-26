@@ -1,0 +1,7 @@
+/target/
+/.toolchain/
+.DS_Store
+env.sh
+*.db
+*.sqlite
+*.sqlite3
